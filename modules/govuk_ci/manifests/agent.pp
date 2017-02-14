@@ -18,6 +18,7 @@ class govuk_ci::agent(
   if $docker_enabled {
     include ::govuk_ci::agent::docker
   }
+  include ::guix
   include ::govuk_ci::agent::rabbitmq
   include ::govuk_ci::agent::elasticsearch
   include ::govuk_ci::agent::mongodb
